@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="titlePage" class="page">
+            <h1>Contact Diary</h1>
+            <button onclick="showPage('addContactPage')">Start</button>
+        </div>
+
+        <div id="addContactPage" class="page hidden">
+            <h1>Add New Contact</h1>
+            <div class="form-group">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Phone Number:</label>
+                <input type="text" id="contactNumber" placeholder="Enter phone number">
+            </div>
+            <button onclick="saveContact()">Save Contact</button>
+            <button onclick="showPage('viewContactsPage')">View Contacts</button>
+        </div>
+
+        <div id="viewContactsPage" class="page hidden">
+            <h1>Contacts</h1>
+            <table id="contactTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="contactList">
+                    <!-- Contacts will be displayed here -->
+                </tbody>
+            </table>
+            <button onclick="showPage('addContactPage')">Add New Contact</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+/* Basic body and page styles */
+body {
+    font-family: 'Georgia', serif;
+    background: #f5f5dc; /* Light background to mimic old paper */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Maximum width for the container */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page styling */
+.page {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* Title page styling */
+#titlePage {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Title styling with animation */
+#titlePage h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #f1eeec;
+    animation: fadeInBounce 2s ease-in-out;
+}
+
+/* Combined fade-in and bounce animation */
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Button styling */
+button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #6f4f28;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+/* Styles for the contacts page */
+#viewContactsPage {
+    background: #f5f5dc; /* Vintage paper background */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* Maximum width for the table container */
+    margin: 20px auto; /* Centering the container horizontally */
+    position: relative;
+    background: url('vintage-paper-texture.jpg'); /* Vintage paper texture */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the contact table */
+#contactTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Space below the table */
+    background: #fff; /* White background for the table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensure borders are clipped */
+}
+
+#contactTable thead {
+    background-color: #d3b89b; /* Light brown for table headers */
+    color: #333; /* Dark text color */
+}
+
+#contactTable th, #contactTable td {
+    padding: 12px;
+    border: 1px solid #d3b89b; /* Light brown border for table cells */
+    text-align: left;
+    font-size: 16px;
+}
+
+#contactTable th {
+    background-color: #bfa08a; /* Slightly darker brown for headers */
+    color: #fff; /* White text color */
+}
+
+#contactTable tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey for alternate rows */
+}
+
+#contactTable tr:hover {
+    background-color: #e0d9c8; /* Light brown on hover */
+}
+
+/* Styling for action buttons in the table */
+.action-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.action-buttons button {
+    background-color: #8b4513; /* Dark brown for edit button */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-buttons button.delete {
+    background-color: #dc3545; /* Red background for delete button */
+}
+
+.action-buttons button:hover {
+    background-color: #6f4f28; /* Darker brown for edit button on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.action-buttons button.delete:hover {
+    background-color: #c82333; /* Darker red for delete button on hover */
+}
+
+/* Styling for the "Add New Contact" button */
+button {
+    background-color: #8b4513; /* Dark brown background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #6f4f28; /* Darker brown on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95); /* Slightly scale down on click */
+}
+/* General styles for the form container */
+#addContactPage {
+    background: #fdf6e3; /* Light cream background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Card effect on hover */
+#addContactPage:hover {
+    transform: scale(1.02); /* Slightly scale up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Styling for the form-group elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for labels */
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333; /* Dark grey color for labels */
+}
+
+/* Styling for input fields */
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for border color change */
+}
+
+/* Input fields on focus */
+.form-group input[type="text"]:focus {
+    border-color: #8b4513; /* Darker brown border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for buttons */
+button {
+    background-color: #8b4513; /* Dark brown background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scale effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #6f4f28; /* Darker brown on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95); /* Slightly scale down on click */
+}
